@@ -1,0 +1,144 @@
+.theme-light {
+	--bg-main: #E0E0E0;
+	--bg-alt: #F0F0F0;
+	--sb-main: #E0E0E0;
+	--sb-alt: #D0D0D0;
+	--text-main: #333;
+	--text-hover: #000;
+	--text-error: #C00;
+	--border: #999;
+	--hier-rail: #BBB;
+}
+.theme-light .navbar input {
+	border-color: #999;
+	background: #FFF;
+}
+.theme-light .navbar {
+	scrollbar-color: #D0D0D0 #E0E0E0;
+}
+.theme-light #main-content {
+	scrollbar-color: #C0C0C0 #F0F0F0;
+}
+.theme-light .code .instruction {
+	color: #33F;
+}
+.theme-light .code .macro {
+	color: #0C0;
+}
+.theme-light .code .register {
+	color: #0CC;
+}
+.theme-light .code .condition {
+	color: #F60;
+}
+.theme-light .code .enum {
+	font-weight: bold;
+}
+.theme-light .code .method {
+	color: #630;
+}
+.theme-light .code .label {
+	color: #4C3319;
+}
+.theme-light .code .variable {
+	color: #036;
+}
+.theme-light .code .numeral {
+	color: #C0C;
+}
+.theme-light .code .comment {
+	color: #363;
+}
+.theme-light .code .string {
+	color: #C00;
+}
+.theme-light .variable.ref, .theme-light .method.ref {
+	color: #33F;
+}
+.theme-light .variable.used {
+	color: #0C0;
+}
+.theme-light .variable.set {
+	color: #C00;
+}
+.theme-light .variable.used.set {
+	color: #AA0;
+}
+.theme-light .variable.used.ref, .method.call.ref {
+	color: #0AA;
+}
+.theme-light .variable.set.ref {
+	color: #A0A;
+}
+
+.theme-dark {
+	--bg-main: #222;
+	--bg-alt: #333;
+	--text-main: #CCC;
+	--text-hover: #FFF;
+	--text-error: #C33;
+	--border: #181818;
+	--hier-rail: #666;
+}
+.theme-dark .navbar input {
+	border-color: #666;
+	background: #282828;
+	color: #CCC;
+}
+.theme-dark .navbar {
+	scrollbar-color: #555 #444;
+}
+.theme-dark #main-content {
+	scrollbar-color: #444 #333;
+}
+.theme-dark .code .instruction {
+	color: #39F;
+}
+.theme-dark .code .macro {
+	color: #3F3;
+}
+.theme-dark .code .register {
+	color: #F93;
+}
+.theme-dark .code .condition {
+	color: #C6C;
+}
+.theme-dark .code .enum {
+	font-weight: bold;
+}
+.theme-dark .code .method {
+	color: #FC9;
+}
+.theme-dark .code .label {
+	color: #E5CCB2;
+}
+.theme-dark .code .variable {
+	color: #9CF;
+}
+.theme-dark .code .numeral {
+	color: #3FF;
+}
+.theme-dark .code .comment {
+	color: #696;
+}
+.theme-dark .code .string {
+	color: #C00;
+}
+.theme-dark .variable.ref, .theme-dark .method.ref {
+	color: #47F;
+}
+.theme-dark .variable.used {
+	color: #6C6;
+}
+.theme-dark .variable.set {
+	color: #F33;
+}
+.theme-dark .variable.used.set {
+	color: #AA0;
+}
+.theme-dark .variable.used.ref, .method.call.ref {
+	color: #0AA;
+}
+.theme-dark .variable.set.ref {
+	color: #A0A;
+}

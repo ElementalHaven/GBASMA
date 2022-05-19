@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="general.css" />
+		<link rel="stylesheet" href="basic-themes.css" />
+		<script src="general.js"></script>
+	</head>
+	<body class="theme-dark line-numbers" onload="gbasma_init()">
+		<div id="app-root">
+			<details class="navbar">
+				<summary id="nav-icon">Methods & Variables</summary>
+				<input type="search" placeholder="Search Methods and Variables"/>
+				<div id="list-wrapper">
+					<details>
+						<summary>Methods</summary>
+						<ul id="method-list"></ul>
+					</details>
+					<details>
+						<summary>Variables</summary>
+						<ul id="var-list"></ul>
+					</details>
+				</div>
+			</details>
+			<div id="center-pane">
+				<div id="toolbar">
+					<div class="button-group" style="float: left">
+						<div class="button" disabled id="view-hier" title="View Hierarchy">H</div>
+					</div>
+					<div class="button-group" style="float: right">
+						<div class="button" id="toggle-line-nos" title="Toggle Line Numbers">1</div>
+						<div class="button" id="theme-btn" title="Change Theme">☀</div>
+					</div>
+				</div>
+				<div id="main-content"></div>
+			</div>
+		</div>
+	</body>
+</html>

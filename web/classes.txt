@@ -1,0 +1,30 @@
+.code
+	.line
+		.comment
+		.register
+		.variable
+		.method
+		.instruction
+		.macro
+		.label
+		.enum
+		.string
+		.numeral
+			.dec
+			.hex
+		.condition
+		.fallthrough
+
+{
+	"name": "wVarName",
+	"type": "variable|bitfield|enum",
+	"validValues": [
+		// bits for bitfields
+		// enum values for enum
+		// unused for normal variables
+	],
+	"settingMethods": [
+	],
+	"usingMethods": [
+	]
+}

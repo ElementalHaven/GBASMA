@@ -1,0 +1,235 @@
+html, body, #app-root {
+	/**
+	Firefox occasionally messes up and doesnt resize the flex box
+	when the search box is opened, causing scrollbars to appear
+	I have no idea if this will fix it, but I can try
+	*/
+	overflow: hidden;
+}
+body {
+	margin: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: var(--bg-main);
+	color: var(--text-main);
+	--toolbar-height: 32px;
+	scrollbar-width: thin;
+}
+a {
+	color: var(--text-main);
+	text-decoration: none;
+}
+a:hover {
+	color: var(--text-hover);
+	text-decoration: underline;
+}
+#app-root {
+	display: flex;
+	flex-direction: row;
+	width: 100vw;
+	height: 100vh;
+}
+.navbar {
+	flex: none;
+	width: 32px;
+	height: 100%;
+	background-color: var(--bg-alt);
+	display: inline-block;
+}
+.navbar:not([open]) summary {
+	height: 100%;
+	box-sizing: border-box;
+	writing-mode: sideways-lr;
+	text-align: center;
+	margin-left: 2px;
+}
+.navbar[open] {
+	width: 224px;
+	flex-direction: column;
+}
+.navbar:not([open]) #nav-icon::marker {
+	color: transparent;
+}
+.navbar input {
+	width: 100%;
+	height: 24px;
+	border-width: 1px 0px;
+	border-style: solid;
+	padding: 4px;
+	box-sizing: border-box;
+}
+.navbar summary {
+	padding: 4px;
+	font-weight: bold;
+	cursor: pointer;
+}
+.navbar details summary {
+	font-size: 14px;
+}
+.navbar summary:hover {
+	color: var(--text-hover);
+}
+.navbar ul {
+	margin: 0px;
+	padding-left: 24px;
+	list-style: none;
+}
+.navbar li {
+	padding-bottom: 2px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 14px;
+}
+.navbar .filtered {
+	display: none;
+}
+#list-wrapper {
+	max-height: calc(100% - 50px);
+	overflow-y: auto;
+}
+#center-pane {
+	flex: auto;
+	display: inline-block;
+	box-sizing: border-box;
+	overflow-y: hidden;
+}
+#toolbar {
+	height: var(--toolbar-height);
+	width: 100%;
+	border-left: 1px solid;
+	border-bottom: 1px solid;
+	box-sizing: border-box;
+	background-color: var(--bg-alt);
+	border-color: var(--border);
+}
+#main-content {
+	box-shadow: 0px 0px 3px inset #000;
+	width: 100%;
+	height: calc(100% - var(--toolbar-height));
+	overflow-y: auto;
+}
+.button-group {
+	display: inline-block;
+	height: 32px;
+}
+.button {
+	border: none;
+	background: none;
+	display: inline-block;
+	box-sizing: border-box;
+	margin: 2px;
+	width: 28px;
+	height: 28px;
+	text-align: center;
+	font-size: 24px;
+	line-height: 26px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.button:not([disabled]):hover {
+	color: var(--text-hover);
+}
+.button[disabled] {
+	opacity: 0.35;
+}
+.info-pane {
+	margin: 16px;
+}
+.info-pane.error span {
+	color: var(--text-error);
+}
+.info-pane h2 {
+	margin-bottom: 2px;
+}
+.info-pane h2 + span {
+	margin-left: 32px;
+}
+.code, .hier, .legend {
+	border-radius: 16px;
+	background-color: var(--bg-alt);
+	padding: 16px;
+	font-size: 14px;
+}
+.line-numbers .code {
+	margin-left: 36px;
+}
+.line-no {
+	display: none;
+	width: 0px;
+}
+.line-numbers .line-no {
+	display: inline-block;
+}
+.line-no > span {
+	position: relative;
+	display: inline-block;
+	width: 48px;
+	right: 72px;
+	text-align: right;
+}
+.line .breakpoint {
+	border-radius: 5px;
+	display: inline-block;
+	position: relative;
+	right: 12px;
+	width: 10px;
+	height: 10px;
+	margin-right: -10px;
+}
+.line .breakpoint:hover {
+	background-color: #F66;
+}
+.line .breakpoint.on {
+	background-color: #C00;
+}
+.line .breakpoint.on:hover {
+	background-color: #F33;
+}
+.code .line {
+	height: 16px;
+	white-space: pre;
+	-moz-tab-size: 4;
+	tab-size: 4;
+	font-family: "Lucida Console", "Consolas", monospace;
+}
+.code .line .error {
+	text-decoration: var(--text-error) wavy underline;
+}
+.legend {
+	border-radius: 5px;
+	padding: 4px 8px;
+	position: fixed;
+	right: 48px;
+	top: 48px;
+	vertical-align: middle;
+	line-height: 18px;
+	border: 1px solid var(--border);
+}
+.legend div {
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	border: 1px solid #000;
+	vertical-align: bottom;
+	margin-bottom: 2px;
+}
+.legend div:not(:first-child) {
+	margin-left: 12px;
+}
+.variable.used.ref.set {
+	color: var(--text-main);
+}
+.hier ul {
+	padding-left: 0px;
+	list-style: none;
+	margin-top: 0px;
+}
+.hier ul ul {
+	padding-left: 8px;
+	margin-left: 8px;
+	margin-bottom: 4px;
+	border-left: 1px solid var(--hier-rail);
+	border-bottom-left-radius: 4px;
+}
+.hier li:last-child {
+	padding-bottom: 4px;
+}
