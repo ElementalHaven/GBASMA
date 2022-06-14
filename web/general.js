@@ -42,6 +42,10 @@ function $(selector) {
 	return document.querySelector(selector);
 }
 
+/**
+ * @param {any[]} array 
+ * @returns True if the array is null or empty, otherwise false
+ */
 function noe(array) {
 	return array === null || array.length == 0;
 }
@@ -241,7 +245,7 @@ function mklink(type, name, parent, listener) {
  */
 function at(text, parent) {
 	let last = parent.lastChild;
-	if(!last || last.ndoeName != "#text") {
+	if(!last || last.nodeName != "#text") {
 		parent.append(document.createTextNode(text));
 	} else {
 		last.innerText += text;
